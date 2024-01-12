@@ -2,17 +2,28 @@
 
 const fs = require('fs');
 
-const base = 3;
-let salida = ''
+let base = 5
 
-for (let i = 1; i <= 10; i++) {
-    salida += `${base} x ${i} = ${base * i}\n`;
+let salida = ''
+const multiplicarXbase = (base) => {
+    
+    for (let i = 1; i <= 10; i++) {
+      salida += `${base} x ${i} = ${base * i}\n`;
+    }
+    return salida
+    
+    
 }
 
-fs.writeFileSync(`tabla-${base}.txt`, salida);
+module.exports = multiplicarXbase
+
+
+/* 
+
+
 console.log('================')
 console.log(`TABLA DEL ${base}`)
 console.log("================");
 console.log(salida)
-console.log(`Se ha creado el archivo tabla-${base}.txt`);
+console.log(`Se ha creado el archivo tabla-${base}.txt`); */
 
