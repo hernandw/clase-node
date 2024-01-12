@@ -2,7 +2,11 @@ const fs = require('fs')
 
 const multiplicarXbase = require('./multiplicar')
 
-const base = 2;
+const [, , base = 1] = process.argv
+
+/* console.log('La base es: ', base) */
+
+
 
 
 
